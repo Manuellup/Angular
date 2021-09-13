@@ -1,0 +1,13 @@
+<div>
+  Id de la factura a buscar:<input type="text" [(ngModel)]="id"><br>
+  <button (click) = "buscarFactura()">Buscar</button>
+</div>
+
+<div>
+   <ul>
+    <li *ngFor="let factura of facturas">
+      {{factura.id}} - {{factura.fecha}} - {{factura.cliente}} -  {{factura.monto}}
+    </li>
+   </ul>
+</div>
+

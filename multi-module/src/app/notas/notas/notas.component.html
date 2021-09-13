@@ -1,0 +1,29 @@
+<p>*************Empiezan las notas*************</p>
+
+<div>
+
+
+  Titulo: <input type="text" [(ngModel)]="title">
+  Content: <input type="text" [(ngModel)]="content">
+  <button type="button" (click)="agregarNota()">Agregar Nota</button>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Options</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let nota of notas">
+        <td>{{nota._id}}</td>
+        <td>{{nota.title}}</td>
+        <td>{{nota.content}}</td>
+        <td><button (click)="eliminarNota(nota._id)">Eliminar</button><button (click)="modificarNota(nota._id)">Modificar</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

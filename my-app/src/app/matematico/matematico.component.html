@@ -1,0 +1,15 @@
+<h1>Mini Calculadora</h1>
+<div>
+  Numero 1: <input type="number" [(ngModel)]="numero1">
+  Numero 2: <input type="number" [(ngModel)]="numero2">
+  <input type="submit" value="Calcular" (click)="calcularOperacion()">
+  <input type="number" [(ngModel)]="resul">
+</div>
+<div>
+    Suma: <input type="radio" name="options" value="1"  [(ngModel)]="option" >
+    Resta: <input type="radio" name="options" value="2" [(ngModel)]="option">
+    Multiplicacion: <input type="radio" name="options" value="3" [(ngModel)]="option">
+    Division: <input type="radio" name="options" value="4" [(ngModel)]="option">
+</div>
+
+<app-matematico-result  (limpiaCajas)="limpiaCajasEjecutado()" [resultado]="resul"></app-matematico-result>
